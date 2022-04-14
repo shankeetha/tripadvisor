@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "TripSans-Med";
+  src: url("../../fonts/icomoon.eot");
+  url: ("../../fonts/icomoon.woff") format("woff"),
+    url ("../../fonts/iconmoon.ttf") format("truetype"),
+    url ("../../fonts/icomoon.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

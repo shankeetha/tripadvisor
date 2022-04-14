@@ -4,7 +4,7 @@ body {
 
 .countainer {
   width: 1100px;
-  height: 10px;
+  /* height: 10px; */
   margin: 0 auto;
   /*border: red solid 2px;*/
   box-sizing: border-box;
@@ -20,6 +20,21 @@ h1 {
 
 h1 span {
   color: #ff5d5d;
+}
+
+h2 {
+  font-size: 27px;
+  line-height: 38px;
+  letter-spacing: 0.6px;
+  font-size: bold;
+}
+h3 {
+  line-height: 40px;
+}
+
+h5 {
+  font-size: 18px;
+  color: #474747;
 }
 /*header*/
 
@@ -100,10 +115,9 @@ header button {
 
 .colonne1 img {
   height: 100%;
-  width: 100%;
   object-fit: cover;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  /* border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; */
 }
 
 .colonne2 {
@@ -121,78 +135,144 @@ header button {
   margin-bottom: 3px;
 }
 
-/*CARROUSSEL*/
+/*Line*/
 
-.carousel-main-title {
-  font-family: "TripSans-Med";
-  font-size: 34px;
-  margin: 50px 0;
-}
-
-.carousel {
+.line {
+  margin: 30px 0;
   display: flex;
-  border: red solid 1px;
-  height: 300px;
-  margin-bottom: 20px;
+  justify-content: space-between;
 }
 
-.carousel-title {
-  flex: 1;
-  margin-bottom: 50px;
+.line > div:first-child > span:nth-child(even) {
+  margin: 0 6px;
+}
+.line > div:first-child > span:nth-child(odd):hover {
+  color: grey;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.carousel .texte {
-  margin-bottom: 50px;
+/* Description */
+
+.description {
+  height: 290px;
+  width: 1100px;
+  margin-bottom: 40px;
+  margin-top: 80px;
+  display: flex;
+}
+
+.description .col-1 {
+  height: 100%;
+  width: 50%;
+}
+
+.description .col-1 p {
+  color: #474747;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 24px;
+  margin-top: 20px;
+  margin-right: 90px;
 }
 
-.carousel-scroll {
-  flex: 3;
+.description .col-2 div:first-child {
+  background-color: #ff5d5d;
+  padding: 30px;
+  box-sizing: border-box;
+  height: 234px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-left: 80px;
+}
+
+.description .col-2 p {
+  margin: 20px 0 40px 0;
+}
+
+.description button {
+  width: 155px;
+  height: 55px;
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  border-radius: 10px;
+}
+
+/* <!-- Section --> */
+
+.section1 {
+  margin-bottom: 100px;
+}
+
+.section1 .title {
+  text-align: center;
+}
+.section1 > div:nth-child(2) {
+  height: 500px;
+  margin-top: 40px;
+  display: flex;
+}
+
+.section1 .col-1 {
+  height: 100%;
+  width: calc(100% / 4);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.section1 .col-2 {
+  height: 100%;
+  width: calc(100% / 4 * 3);
   display: flex;
   overflow: hidden;
-  overflow: scroll;
-  gap: 15px;
+  overflow-x: scroll;
 }
 
-.carousel-scroll-box {
-  flex: calc(33.3333% - 10px);
+.section1 .col-1 p {
+  margin: 20px 0;
+  color: #474747;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 21.6px;
+}
+
+.section1 .col-carroussel {
+  background-color: lightgreen;
+  height: 100%;
+  width: calc(100% / 3 - (40px / 3));
+  border: solid black 2px;
+  box-sizing: border-box;
   flex-shrink: 0;
 }
 
-.carousel-img {
-  height: 60%;
+.section1 .col-carroussel:not(:last-child) {
+  margin-right: 20px;
+}
+
+.section1 .col-carroussel > div:first-child {
+  width: 100%;
+  height: 206px;
   position: relative;
 }
 
-.carousel-img .icone {
+.section1 .col-carroussel > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section1 .circle {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
   position: absolute;
   top: 10px;
   right: 10px;
-  padding: 10px;
-  border-radius: 50%;
-  background-color: white;
-}
-
-.caroussel-img .icone i {
-  color: red;
-}
-.carousel-img img {
-  width: 100%;
-  height: 100%;
-}
-
-.text-container {
-  height: 40%;
-}
-
-.text-container .main-title {
-  font-size: 20px;
-}
-
-.text-container .seconf-title {
-  font-size: 15px;
-}
-
-footer {
-  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
